@@ -61,7 +61,7 @@ namespace CafeManagement
             chkCheese.Checked = false;
             chkRainbowCake.Checked = false;
         }
-
+        //Btn Receipt
         private void button2_Click(object sender, EventArgs e)
         {
             //btnReceipt
