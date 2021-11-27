@@ -126,14 +126,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(133, 0);
+            this.label1.Location = new System.Drawing.Point(172, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(767, 73);
+            this.label1.Size = new System.Drawing.Size(754, 55);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CAFE BILLING SYSTEM";
+            this.label1.Text = "PWANI CAFE BILLING SYSTEM";
             // 
             // lblDate
             // 
@@ -246,9 +246,9 @@
             this.chkAfricanCoffe.Location = new System.Drawing.Point(11, 122);
             this.chkAfricanCoffe.Margin = new System.Windows.Forms.Padding(2);
             this.chkAfricanCoffe.Name = "chkAfricanCoffe";
-            this.chkAfricanCoffe.Size = new System.Drawing.Size(162, 21);
+            this.chkAfricanCoffe.Size = new System.Drawing.Size(172, 21);
             this.chkAfricanCoffe.TabIndex = 1;
-            this.chkAfricanCoffe.Text = "Cold Coffee  85.00";
+            this.chkAfricanCoffe.Text = "Africa Coffee  85.00";
             this.chkAfricanCoffe.UseVisualStyleBackColor = true;
             this.chkAfricanCoffe.CheckedChanged += new System.EventHandler(this.chkAfricanCoffe_CheckedChanged);
             // 

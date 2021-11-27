@@ -67,15 +67,26 @@ namespace CafeManagement
             //btnReceipt
             rtfReceipt.Clear();
 
-           // rtfReceipt.AppendText(Environment.NewLine);
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
+            double lat, mocha, espr, vale, cappu, afri, mTea, cTea;
+            double cCake, rValvet, bFor, bCream, lChoco, kChoco, cheese, rain;
+            
+
+            lat = 49; mocha = 50; espr = 80; vale = 59; cappu = 70; afri = 85; mTea = 40; cTea = 55; //coffee pries
+            cCake = 50; rValvet = 100; bFor = 60; bCream = 40; lChoco = 79; kChoco = 100; cheese = 85; rain = 89; //cake prices
+
+            // rtfReceipt.AppendText(Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
             rtfReceipt.AppendText("\t" + "       PWANI CAFE" + Environment.NewLine);
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
-            rtfReceipt.AppendText("ITEM" + "\t\t\t\t" + "QTY" + Environment.NewLine);
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText(lblTimer.Text + "\t\t" + lblDate.Text + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("ITEM" + "\t\t\t" + "QTY" + "\t" + "PRICE" + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            
+            
             if (chkLatte.Checked == true)
             {
-                rtfReceipt.AppendText("Latte \t\t\t\t" + txtLatte.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Latte \t\t\t" + txtLatte.Text + "\t" + (Convert.ToDouble(txtLatte.Text) * lat) + Environment.NewLine);
             }
             else
             {
@@ -83,7 +94,7 @@ namespace CafeManagement
             }
             if (chkEspresso.Checked == true)
             {
-                rtfReceipt.AppendText("Espresso \t\t\t" + txtEspresso.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Espresso \t\t" + txtEspresso.Text  + "\t" + (Convert.ToDouble(txtEspresso.Text) * espr) + Environment.NewLine);
             }
             else
             {
@@ -91,7 +102,7 @@ namespace CafeManagement
             }
             if (chkMocha.Checked == true)
             {
-                rtfReceipt.AppendText("Mocha \t\t\t\t" + txtMocha.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Mocha \t\t\t" + txtMocha.Text + "\t" + (Convert.ToDouble(txtMocha.Text) * mocha) + Environment.NewLine);
             }
             else
             {
@@ -99,7 +110,7 @@ namespace CafeManagement
             }
             if (chkValeCoffee.Checked == true)
             {
-                rtfReceipt.AppendText("ValeCoffe \t\t\t" + txtValeCoffee.Text + Environment.NewLine);
+                rtfReceipt.AppendText("ValeCoffe \t\t" + txtValeCoffee.Text + "\t" + (Convert.ToDouble(txtValeCoffee.Text) * vale) + Environment.NewLine);
             }
             else
             {
@@ -107,7 +118,7 @@ namespace CafeManagement
             }
             if (chkCappucino.Checked == true)
             {
-                rtfReceipt.AppendText("Capuucino \t\t\t" + txtCappu.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Capuucino \t\t" + txtCappu.Text + "\t" + (Convert.ToDouble(txtCappu.Text) * cappu) + Environment.NewLine);
             }
             else
             {
@@ -115,7 +126,7 @@ namespace CafeManagement
             }
             if (chkAfricanCoffe.Checked == true)
             {
-                rtfReceipt.AppendText("African Coffee \t\t\t" + txtAfricanCoffee.Text + Environment.NewLine);
+                rtfReceipt.AppendText("African Coffee \t\t" + txtAfricanCoffee.Text + "\t" + (Convert.ToDouble(txtAfricanCoffee.Text) * afri) + Environment.NewLine);
             }
             else
             {
@@ -123,7 +134,7 @@ namespace CafeManagement
             }
             if (chkMilkTea.Checked == true)
             {
-                rtfReceipt.AppendText("Milk Tea \t\t\t" + txtMilkTea.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Milk Tea \t\t" + txtMilkTea.Text + "\t" + (Convert.ToDouble(txtMilkTea.Text) * mTea) + Environment.NewLine);
             }
             else
             {
@@ -131,7 +142,7 @@ namespace CafeManagement
             }
             if (chkChineseTea.Checked == true)
             {
-                rtfReceipt.AppendText("Chinese Tea \t\t\t" + txtChineseTea.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Chinese Tea \t\t" + txtChineseTea.Text + "\t" + (Convert.ToDouble(txtChineseTea.Text) * cTea) + Environment.NewLine);
             }
             else
             {
@@ -139,7 +150,7 @@ namespace CafeManagement
             }
             if (chkCoffe.Checked == true)
             {
-                rtfReceipt.AppendText("Coffee Cake \t\t\t" + txtCoffeCake.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Coffee Cake \t\t" + txtCoffeCake.Text + "\t" + (Convert.ToDouble(txtCoffeCake.Text)*cCake) + Environment.NewLine);
             }
             else
             {
@@ -147,7 +158,7 @@ namespace CafeManagement
             }
             if (chkRedValvet.Checked == true)
             {
-                rtfReceipt.AppendText("Red Valvet Cake \t\t" + txtRedValvetCake.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Red Valvet Cake \t" + txtRedValvetCake.Text + "\t" + (Convert.ToDouble(txtRedValvetCake.Text) * rValvet) + Environment.NewLine);
             }
             else
             {
@@ -155,7 +166,7 @@ namespace CafeManagement
             }
             if (chkBlackForest.Checked == true)
             {
-                rtfReceipt.AppendText("Black Forest Cake \t\t" + txtBlackForestCake.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Black Forest Cake \t" + txtBlackForestCake.Text + "\t" + (Convert.ToDouble(txtBlackForestCake.Text) * bFor) + Environment.NewLine);
             }
             else
             {
@@ -163,7 +174,7 @@ namespace CafeManagement
             }
             if (chkBostonCream.Checked == true)
             {
-                rtfReceipt.AppendText("Boston Cream Cake \t\t" + txtBostonCream.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Boston Cream Cake \t" + txtBostonCream.Text + "\t" + (Convert.ToDouble(txtBostonCream.Text) * bCream) + Environment.NewLine);
             }
             else
             {
@@ -171,7 +182,7 @@ namespace CafeManagement
             }
             if (checkBox13.Checked == true)
             {
-                rtfReceipt.AppendText("Lagos Chocolate Cake \t\t" + txtLagosChoco.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Lagos Chocolate Cake \t" + txtLagosChoco.Text + "\t" + (Convert.ToDouble(txtLagosChoco.Text) * lChoco) + Environment.NewLine);
             }
             else
             {
@@ -179,7 +190,7 @@ namespace CafeManagement
             }
             if (chkKilburnChoco.Checked == true)
             {
-                rtfReceipt.AppendText("Kilburn Chocolate Cake \t\t" + txtKillburnChoco.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Kilburn Chocolate Cake \t" + txtKillburnChoco.Text + "\t" + (Convert.ToDouble(txtKillburnChoco.Text) * kChoco) + Environment.NewLine);
             }
             else
             {
@@ -187,7 +198,7 @@ namespace CafeManagement
             }
             if (chkCheese.Checked == true)
             {
-                rtfReceipt.AppendText("Cheese Cake \t\t\t" + txtCheeseCake.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Cheese Cake \t\t" + txtCheeseCake.Text + "\t" + (Convert.ToDouble(txtCheeseCake.Text) * cheese) + Environment.NewLine);
             }
             else
             {
@@ -195,7 +206,7 @@ namespace CafeManagement
             }
             if (chkRainbowCake.Checked == true)
             {
-                rtfReceipt.AppendText("Rainbow Cake \t\t\t" + txtRainbowCake.Text + Environment.NewLine);
+                rtfReceipt.AppendText("Rainbow Cake \t\t" + txtRainbowCake.Text + "\t" + (Convert.ToDouble(txtRainbowCake.Text) * rain) + Environment.NewLine);
             }
             else
             {
@@ -203,14 +214,16 @@ namespace CafeManagement
             }
 
             
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
-            rtfReceipt.AppendText("Service Charge \t\t" + lblSvcCharge.Text + Environment.NewLine);
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
-            rtfReceipt.AppendText("Tax \t\t\t\t" + lblTax.Text + Environment.NewLine);
-            rtfReceipt.AppendText("Sub Total \t\t\t" + lblSubTotal.Text + Environment.NewLine);
-            rtfReceipt.AppendText("Total Cost \t\t\t" + lblTotal.Text + Environment.NewLine);
-            rtfReceipt.AppendText("----------------------------------------------------------------" + Environment.NewLine);
-            rtfReceipt.AppendText(lblTimer.Text + "\t\t\t" + lblDate.Text);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("Service Charge \t" + lblSvcCharge.Text + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("Tax \t\t\t" + lblTax.Text + Environment.NewLine);
+            rtfReceipt.AppendText("Sub Total \t\t" + lblSubTotal.Text + Environment.NewLine);
+            rtfReceipt.AppendText("Total Cost \t\t" + lblTotal.Text + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+            rtfReceipt.AppendText("-----------------------------------------------------------" + Environment.NewLine);
+
 
         }
 
@@ -223,9 +236,9 @@ namespace CafeManagement
              sCh = 0;
 
             lat = 49; mocha = 50; espr = 80; vale = 59; cappu = 70; afri = 85; mTea = 40; cTea = 55; //coffee pries
-            cCake = 50; rValvet = 100; bFor = 60; bCream = 40; lChoco = 79; kChoco = 109; cheese = 85; rain = 89; //cake prices
-            CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US");
-            //CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US"); //US Currency
+            cCake = 50; rValvet = 100; bFor = 60; bCream = 40; lChoco = 79; kChoco = 100; cheese = 85; rain = 89; //cake prices
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("en-KE");
+            //CultureInfo culture = CultureInfo.CreateSpecificCulture("en-KE"); //Kenya Currency
 
             //Coffee
             double latteeCof = Convert.ToDouble(txtLatte.Text);
@@ -273,7 +286,7 @@ namespace CafeManagement
         private void btnExit_Click(object sender, EventArgs e)
         {
            Application.Exit();
-            double latteeCof = Convert.ToDouble(txtLatte.Text);
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -674,7 +687,7 @@ namespace CafeManagement
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(rtfReceipt.Text, new Font("Arial", 14, FontStyle.Regular), Brushes.Black, 120, 120);
+            e.Graphics.DrawString(rtfReceipt.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, 120, 120);
         }
 
         private void printToolStripButton_Click(object sender, EventArgs e)
